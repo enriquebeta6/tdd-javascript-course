@@ -1,0 +1,23 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:watch",
+    "test:watch": "./node_modules/.bin/mocha ./**/src/tests/**/*.test.js --watch"
+  },
+  "keywords": [
+    "javascript",
+    "TDD",
+    "mocha",
+    "chaijs",
+    "testing"
+  ],
+  "author": "Enrique Mora",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
