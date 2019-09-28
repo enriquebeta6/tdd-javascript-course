@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:watch",
-    "test:watch": "mocha ./**/src/tests/**/*.test.js --watch --require @babel/register"
+    "test": "mocha ./**/src/tests/**/*.test.js --require @babel/register",
+    "test:watch": "mocha ./**/src/tests/**/*.test.js --watch --require @babel/register",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": ["text", "html"]
   },
   "keywords": [
     "javascript",
@@ -24,7 +28,8 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/register": "^7.6.0",
     "chai": "^4.2.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0"
