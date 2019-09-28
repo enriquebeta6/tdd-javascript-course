@@ -30,4 +30,8 @@ describe('FizzBuzz', () => {
     expect(FizzBuzz(2)).to.be.equal(2);
     expect(FizzBuzz(22)).to.be.equal(22);
   });
+
+  it('Should return 0 when the "number" is equal 0', () => {
+    expect(FizzBuzz(0)).to.be.equal(0);
+  });
 });
