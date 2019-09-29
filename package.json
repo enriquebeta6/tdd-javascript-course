@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint **/src/js/*.js",
     "test": "mocha **/src/tests/**/*.test.js --require @babel/register",
     "test:watch": "mocha **/src/tests/**/*.test.js --watch --require @babel/register",
     "test:coverage": "nyc npm test"
@@ -29,7 +30,8 @@
     "ES6",
     "babel",
     "nyc",
-    "test coverage"
+    "test coverage",
+    "eslint"
   ],
   "author": "Enrique Mora",
   "license": "ISC",
@@ -39,6 +41,9 @@
     "@babel/preset-env": "^7.6.0",
     "@babel/register": "^7.6.0",
     "chai": "^4.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1"
   },
