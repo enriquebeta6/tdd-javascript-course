@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./**/src/tests/**/*.test.js --require @babel/register",
-    "test:watch": "mocha ./**/src/tests/**/*.test.js --watch --require @babel/register",
+    "test": "mocha **/src/tests/**/*.test.js --require @babel/register",
+    "test:watch": "mocha **/src/tests/**/*.test.js --watch --require @babel/register",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "reporter": ["text", "html"]
+    "check-coverage": true,
+    "statements": 80,
+    "branches": 80,
+    "functions": 80,
+    "lines": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": ["**/src/tests/*.test.js"]
   },
   "keywords": [
     "javascript",
@@ -18,7 +27,9 @@
     "chaijs",
     "testing",
     "ES6",
-    "babel"
+    "babel",
+    "nyc",
+    "test coverage"
   ],
   "author": "Enrique Mora",
   "license": "ISC",
