@@ -21,6 +21,11 @@
     ],
     "exclude": ["**/src/tests/*.test.js"]
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run test:coverage"
+    }
+  },
   "keywords": [
     "javascript",
     "TDD",
@@ -31,7 +36,8 @@
     "babel",
     "nyc",
     "test coverage",
-    "eslint"
+    "eslint",
+    "husky"
   ],
   "author": "Enrique Mora",
   "license": "ISC",
@@ -44,6 +50,7 @@
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.7",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1"
   },
